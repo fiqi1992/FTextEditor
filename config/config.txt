@@ -1,0 +1,2 @@
+/home/fiqidev/jdk-11.0.3\jre\lib
+/home/fiqidev/jdk-11.0.3\jre\lib\ext
