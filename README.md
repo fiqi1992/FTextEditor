@@ -1,4 +1,4 @@
 # FTextEditor
-Text Editor sederhana untuk Java dan Kotlin dibuat menggunakan bahasa 
+Simple Text Editor for Java and Kotlin created with Kotlin programing language 
 
-Aplikasi ini masih sederhana dibuat menggunakan IDE IntellijIDEA
+This application is made with IDE IntellijIDEA Community Edition 
