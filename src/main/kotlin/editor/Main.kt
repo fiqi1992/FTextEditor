@@ -12,7 +12,8 @@ import javax.swing.text.StyleConstants
 
 /**
  * Created by Dima on 15-Aug-15.
- * diupdate oleh FiqiDev pada 29-Juni-2019
+ * Updated by FiqiDev on 29-Juni-2019
+ *
  */
 
 var frame = JFrame("Text Editor")

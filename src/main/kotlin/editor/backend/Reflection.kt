@@ -16,6 +16,8 @@ import java.util.regex.Pattern
 
 /**
  * Created by Dima on 19-Aug-15.
+ * Updated by FiqiDev on 29-Juni-2019
+ *
  */
 val variableMap = HashMap<String, Class<*>?>()
 val uVariableMap = HashMap<String, Class<*>?>()

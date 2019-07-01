@@ -5,6 +5,8 @@ import java.util.*
 
 /**
  * Created by Dima on 22-Aug-15.
+ * Updated by FiqiDev on 29-Juni-2019
+ *
  */
 //config
 val CONFIG_PATH = "config/config.txt"

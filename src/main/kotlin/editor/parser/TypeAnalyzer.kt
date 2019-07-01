@@ -6,6 +6,8 @@ import java.util.*
 
 /**
  * Created by Dima on 12-Sep-15.
+ * Updated by FiqiDev on 29-Juni-2019
+ *
  */
 class Node(val value: String) {
     val children: ArrayList<Node> = arrayListOf()
