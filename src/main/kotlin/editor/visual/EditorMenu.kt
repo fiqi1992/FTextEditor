@@ -3,30 +3,64 @@ package editor.visual
 import editor.backend.*
 import editor.*
 import java.awt.Dimension
+import java.awt.FlowLayout
 import java.awt.event.ActionEvent
-import javax.swing.ImageIcon
-import javax.swing.JMenu
-import javax.swing.JMenuBar
-import javax.swing.JMenuItem
+import java.awt.event.WindowAdapter
+import java.awt.event.WindowEvent
+import javax.swing.*
 
 /**
  * Created by Dima on 22-Aug-15.
  * Updated by FiqiDev on 29-Juni-2019
  *
  */
+
 fun buildMenuBar(): JMenuBar {
 
+
     //setup icon - about
-    val iconAboutMe = ImageIcon("icons/about_me.png")
     val iconAboutApplication = ImageIcon("icons/about.png")
 
     //setup menu - about
     val aboutMenu = JMenu("About")
-    val aboutMe = JMenuItem("About Me", iconAboutMe)
-    val aboutAppication = JMenuItem("About Application", iconAboutApplication)
+    val aboutApplication = JMenuItem("About Application", iconAboutApplication)
 
-    aboutMenu.add(aboutMe)
-    aboutMenu.add(aboutAppication)
+    aboutMenu.add(aboutApplication)
+
+
+    //About actionListener
+    aboutApplication.addActionListener {
+        var contentText: String? = null
+        val text: JLabel = JLabel()
+
+        val panelAboutApplication = JPanel(FlowLayout())
+        panelAboutApplication.border = BorderFactory.createEmptyBorder(8, 8, 8, 8)
+
+        val aboutApplicationFrame = JFrame()
+        aboutApplicationFrame.addWindowListener(object : WindowAdapter() {
+            override fun windowClosing(e: WindowEvent?) {
+                aboutApplicationFrame.dispose()
+            }
+        })
+
+        aboutApplicationFrame.setSize(500, 300)
+        aboutApplicationFrame.setLocationRelativeTo(frame)
+
+        aboutApplicationFrame.title = "About this Application - ${frame.title}"
+
+        contentText = "<html><body><p>" +
+                "Name: " + frame.title + "<br />" +
+                "Version: 1.0" + "<br />" +
+                "Developer: FiqiDev" +
+                "</p></body></html>"
+
+        text.text = contentText
+        panelAboutApplication.add(text)
+        aboutApplicationFrame.add(panelAboutApplication)
+
+        aboutApplicationFrame.isVisible = true
+
+    }
 
 
     val bar = JMenuBar()
@@ -36,6 +70,8 @@ fun buildMenuBar(): JMenuBar {
     bar.add(aboutMenu)
     return bar
 }
+
+
 
 private fun setupMenu(name: String, map: Map<String, () -> Unit>): JMenu {
     val menu = JMenu(name)

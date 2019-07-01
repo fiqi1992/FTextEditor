@@ -1,0 +1,2 @@
+/home/fiqidev/.sdkman/candidates/java/current\jre\lib
+/home/fiqidev/.sdkman/candidates/java/current\jre\lib\ext
